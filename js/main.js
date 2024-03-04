@@ -40,6 +40,9 @@ reviewList.addEventListener('click', (evt) => {
   const target = evt.target;
   video.forEach((item, i) => {
     if (target.parentElement === play[i] || target === item || target === play[i]) {
+      play.forEach((item) => {
+        item.classList.remove('hide');
+      })
       play[i].classList.add('hide');
       if (video[i].paused) {
         video.forEach((item) => {
